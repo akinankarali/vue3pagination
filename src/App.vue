@@ -138,7 +138,7 @@ onBeforeUnmount(() => {
   <main class="app-shell">
     <section class="page-header">
       <p class="eyebrow">Vue 3</p>
-      <h1>AI Content Review Dashboard</h1>
+      <h1>Dashboard</h1>
       <p class="summary">
         {{ totalPrograms }} programs found. Showing {{ programs.length }} items on page
         {{ currentPage }} of {{ totalPages }}.

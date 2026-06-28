@@ -1,6 +1,6 @@
 # Vue 3 Pagination
 
-A small Vue 3, TypeScript, and Vite practice project focused on a realistic frontend pagination workflow. The app simulates an AI content review dashboard where an editor reviews AI-generated university program descriptions, searches through programs, navigates paginated results, and marks suggestions as approved or rejected.
+A small Vue 3, TypeScript, and Vite practice project focused on a realistic frontend pagination workflow. The app simulates a description review dashboard where an editor reviews university program descriptions, searches through programs, navigates paginated results, and marks as approved or rejected.
 
 Live demo: https://akinankarali.github.io/vue3pagination/
 
