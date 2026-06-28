@@ -169,7 +169,7 @@ onBeforeUnmount(() => {
               <span class="status-badge" :class="program.status">{{ program.status }}</span>
             </div>
             <p class="university">{{ program.university }}</p>
-            <p class="description">{{ program.ai_description }}</p>
+            <p class="description">{{ program.description }}</p>
           </div>
 
           <div class="review-actions" aria-label="Review actions">

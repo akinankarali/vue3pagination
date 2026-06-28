@@ -56,7 +56,7 @@ const createMockPrograms = (): Program[] => {
       id,
       title: `${degree} ${subject}`,
       university,
-      ai_description: `AI-generated update for ${degree} ${subject} at ${university}. This version improves clarity, structure, and study outcome details for prospective students.`,
+      description: `${degree} ${subject} at ${university}. This version improves clarity, structure, and study outcome details for prospective students.`,
       status: 'pending',
     };
   });
@@ -76,11 +76,11 @@ export const fetchPrograms = async ({
   const normalizedSearch = search.trim().toLowerCase();
   const filteredPrograms = normalizedSearch
     ? programs.filter((program) => {
-        return (
-          program.title.toLowerCase().includes(normalizedSearch) ||
-          program.university.toLowerCase().includes(normalizedSearch)
-        );
-      })
+      return (
+        program.title.toLowerCase().includes(normalizedSearch) ||
+        program.university.toLowerCase().includes(normalizedSearch)
+      );
+    })
     : programs;
 
   const total = filteredPrograms.length;

@@ -59,7 +59,7 @@ export interface Program {
   id: number;
   title: string;
   university: string;
-  ai_description: string;
+  description: string;
   status: 'pending' | 'approved' | 'rejected';
 }
 ```
