@@ -6,7 +6,7 @@ Live demo: https://akinankarali.github.io/vue3pagination/
 
 ## What This Project Demonstrates
 
-This project is intentionally scoped around frontend fundamentals that often appear in senior frontend interviews:
+This project is intentionally scoped around frontend fundamentals
 
 - server-style pagination instead of slicing all data directly in the component
 - URL-driven page state with `?page=2`
