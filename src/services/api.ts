@@ -1,4 +1,4 @@
-import type { Program } from '../types';
+import type { Program, PaginatedResponse } from '@/types';
 
 export interface FetchProgramsParams {
   page?: number;
@@ -6,13 +6,6 @@ export interface FetchProgramsParams {
   search?: string;
 }
 
-export interface PaginatedProgramsResponse {
-  programs: Program[];
-  total: number;
-  page: number;
-  pageSize: number;
-  totalPages: number;
-}
 
 const LATENCY_MS = 500;
 const PROGRAM_COUNT = 5_000;
@@ -66,7 +59,7 @@ export const fetchPrograms = async ({
   page = 1,
   pageSize = 10,
   search = '',
-}: FetchProgramsParams = {}): Promise<PaginatedProgramsResponse> => {
+}: FetchProgramsParams = {}): Promise<PaginatedResponse<Program>> => {
   await delay(LATENCY_MS);
 
   if (!programs) {
@@ -90,7 +83,7 @@ export const fetchPrograms = async ({
   const paginatedPrograms = filteredPrograms.slice(startIndex, startIndex + pageSize);
 
   return {
-    programs: paginatedPrograms,
+    data: paginatedPrograms,
     total,
     page: safePage,
     pageSize,
